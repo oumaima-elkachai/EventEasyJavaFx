@@ -5,11 +5,17 @@ package Controllers;
         import javafx.collections.ObservableList;
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;
+        import javafx.fxml.FXMLLoader;
+        import javafx.scene.Parent;
+        import javafx.scene.Scene;
         import javafx.scene.control.*;
         import javafx.scene.control.cell.PropertyValueFactory;
+        import javafx.stage.Stage;
         import models.Category_l;
         import services.CategoryService;
         import utils.DataSource;
+
+        import java.io.IOException;
         import java.sql.Connection;
         import java.util.*;
 
@@ -21,6 +27,11 @@ public class AjouterCategoryL {
 
     @FXML
     private TableColumn<Category_l, String> NomId;
+
+    @FXML
+    private Button btnAfficher;
+    @FXML
+    private Button btnAfficherCat;
 
 
 
@@ -165,8 +176,6 @@ public class AjouterCategoryL {
                 Category_l category;
                 boolean matchesId;
                 boolean matchesName;
-                boolean matchesDescription;
-                boolean matchesIcon;
                 do {
                     if (!var4.hasNext()) {
                         ObservableList<Category_l> observableList = FXCollections.observableList(filteredCategories);
@@ -182,6 +191,49 @@ public class AjouterCategoryL {
                 filteredCategories.add(category);
             }
         }
+    @FXML
+    void afficherLieu(ActionEvent event) {
+        try {
+            // Charger la vue des lieux fournit
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AfficherLieu.fxml"));
+            Parent root = loader.load();
+
+            // Créer une nouvelle scène
+            Scene scene = new Scene(root);
+
+            // Obtenir la scène actuelle
+            Stage stage = (Stage) btnAfficher.getScene().getWindow();
+
+            // Afficher la nouvelle scène
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    @FXML
+    void afficherCat(ActionEvent event) {
+        try {
+            // Charger la vue des lieux fournit
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AjouterCategoryL.fxml"));
+            Parent root = loader.load();
+
+            // Créer une nouvelle scène
+            Scene scene = new Scene(root);
+
+            // Obtenir la scène actuelle
+            Stage stage = (Stage) btnAfficherCat.getScene().getWindow();
+
+            // Afficher la nouvelle scène
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
 
 }

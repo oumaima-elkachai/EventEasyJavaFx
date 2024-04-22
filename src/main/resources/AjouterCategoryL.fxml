@@ -19,53 +19,6 @@
 <AnchorPane prefHeight="439.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AjouterCategoryL">
    <children>
       <BorderPane prefHeight="439.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <left>
-            <VBox prefHeight="400.0" prefWidth="122.0" style="-fx-background-color: #e6dddf;" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fitHeight="115.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/Monogram__preview.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets left="15.0" top="25.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="192.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="All Categories">
-                     <graphic>
-                        <ImageView fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/menu.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <VBox.margin>
-                        <Insets top="25.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="192.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="All Places">
-                     <graphic>
-                        <ImageView fitHeight="19.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/tool.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="192.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="Reservations">
-                     <graphic>
-                        <ImageView fitHeight="16.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/reservation.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
-            </VBox>
-         </left>
          <right>
             <Pane prefHeight="439.0" prefWidth="433.0" BorderPane.alignment="CENTER">
                <children>
@@ -124,9 +77,10 @@
             </Pane>
          </right>
          <center>
-            <Pane prefHeight="439.0" prefWidth="207.0" BorderPane.alignment="CENTER">
+            <Pane prefHeight="439.0" prefWidth="202.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox layoutX="15.0" layoutY="77.0" prefHeight="320.0" prefWidth="175.0" spacing="15.0">
+                  <VBox prefHeight="439.0" prefWidth="199.0" style="-fx-background-color: #e6dddf;" />
+                  <VBox layoutX="199.0" prefHeight="439.0" prefWidth="194.0" spacing="15.0">
                      <children>
                         <Label alignment="CENTER" text="Add Category">
                            <VBox.margin>
@@ -152,10 +106,49 @@
                         <Insets left="14.0" top="50.0" />
                      </padding>
                   </VBox>
+                  <Pane prefHeight="439.0" prefWidth="175.0">
+                     <children>
+                        <Button layoutX="-3.0" layoutY="200.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="Reservations">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/reservation.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnAfficherCat" layoutY="160.0" mnemonicParsing="false" onAction="#afficherCat" prefHeight="42.0" prefWidth="179.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="All Categories">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/menu.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ImageView fitHeight="115.0" fitWidth="192.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/Monogram__preview.png" />
+                           </image>
+                        </ImageView>
+                        <HBox layoutX="-4.0" layoutY="119.0" prefHeight="48.0" prefWidth="182.0">
+                           <children>
+                              <Button fx:id="btnAfficher" focusTraversable="true" mnemonicParsing="false" onAction="#afficherLieu" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="All Places">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/tool.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
                </children>
             </Pane>
          </center>
       </BorderPane>
-      <HBox prefHeight="100.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

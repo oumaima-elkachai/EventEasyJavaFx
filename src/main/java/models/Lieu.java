@@ -141,7 +141,7 @@ public class Lieu {
         this.image = image;
     }
 
-    public java.sql.Date getDate_d() {
+    public String getDate_d() {
         return (java.sql.Date) date_d;
     }
 
@@ -149,7 +149,7 @@ public class Lieu {
         this.date_d = date_d;
     }
 
-    public java.sql.Date getDate_f() {
+    public String getDate_f() {
         return (java.sql.Date) date_f;
     }
 

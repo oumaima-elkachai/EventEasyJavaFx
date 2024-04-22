@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ModifierLieu">
+<children>
+    <VBox alignment="TOP_CENTER" layoutX="50.0" layoutY="20.0" spacing="10.0">
+        <Label text="Modifier Lieu" />
+        <Label text="Nom :" />
+        <TextField fx:id="nomTextField" />
+        <Label text="Prix :" />
+        <TextField fx:id="prixTextField" />
+        <Label text="Date de début :" />
+        <TextField fx:id="dateDebutTextField" />
+        <Label text="Date de fin :" />
+        <TextField fx:id="dateFinTextField" />
+        <Label text="Capacité :" />
+        <TextField fx:id="capaciteTextField" />
+        <Label text="Région :" />
+        <TextField fx:id="regionTextField" />
+        <!-- Ajoutez des champs pour d'autres propriétés du lieu si nécessaire -->
+        <Button onAction="#modifierLieu" text="Modifier" />
+    </VBox>
+</children>
+</AnchorPane>

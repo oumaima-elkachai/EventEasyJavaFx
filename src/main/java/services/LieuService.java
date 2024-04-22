@@ -159,4 +159,5 @@ public class LieuService implements ILieuService<Lieu> {
         return categoryService.afficher(); // Utilisez la méthode afficher() pour récupérer les catégories
     }
 
+
 }

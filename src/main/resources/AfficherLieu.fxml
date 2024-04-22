@@ -8,7 +8,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -16,65 +15,67 @@
 <AnchorPane prefHeight="752.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AfficherLieu">
    <children>
       <BorderPane prefHeight="439.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <left>
-            <VBox prefHeight="597.0" prefWidth="172.0" style="-fx-background-color: #e6dddf;" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fitHeight="115.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/Monogram__preview.png" />
-                     </image>
-                     <VBox.margin>
-                        <Insets left="15.0" top="25.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="192.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="All Categories">
-                     <graphic>
-                        <ImageView fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/menu.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <VBox.margin>
-                        <Insets top="25.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font name="Berlin Sans FB Bold" size="13.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="192.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="All Places">
-                     <graphic>
-                        <ImageView fitHeight="19.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/tool.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="192.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="Reservations">
-                     <graphic>
-                        <ImageView fitHeight="16.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icons/reservation.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
-            </VBox>
-         </left>
          <center>
             <Pane prefHeight="377.0" prefWidth="185.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" layoutX="314.0" layoutY="34.0" text="Places" textFill="#f6bdb3">
+                  <Label alignment="CENTER" layoutX="539.0" layoutY="30.0" text="Places" textFill="#f6bdb3">
                      <font>
                         <Font name="Berlin Sans FB Bold" size="39.0" />
                      </font>
                   </Label>
-                  <ScrollPane fx:id="scroll" layoutX="28.0" layoutY="108.0" prefHeight="614.0" prefWidth="678.0">
+                  <Pane prefHeight="752.0" prefWidth="208.0">
+                     <children>
+                        <VBox prefHeight="752.0" prefWidth="207.0" style="-fx-background-color: #e6dddf;">
+                           <children>
+                              <ImageView fitHeight="115.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/Monogram__preview.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="25.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Button fx:id="btnAfficherL" mnemonicParsing="false" onAction="#afficherL" prefHeight="37.0" prefWidth="209.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="All Places">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/tool.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Button>
+                              <Button fx:id="btnAfficherCat" mnemonicParsing="false" onAction="#afficherC" prefHeight="42.0" prefWidth="208.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="All Categories">
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/menu.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets top="25.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Berlin Sans FB Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="211.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="Reservations">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/reservation.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <ScrollPane fx:id="scroll" layoutX="232.0" layoutY="102.0" prefHeight="614.0" prefWidth="678.0">
                      <content>
                         <VBox fx:id="vbox" prefHeight="612.0" prefWidth="677.0" />
                      </content>
@@ -83,6 +84,5 @@
             </Pane>
          </center>
       </BorderPane>
-      <HBox prefHeight="100.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

@@ -43,7 +43,7 @@
                         <Insets top="25.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="192.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="All Places">
+                  <Button fx:id="btnAfficher" mnemonicParsing="false" onAction="#afficherLieu" prefHeight="37.0" prefWidth="192.0" style="-fx-background-color: #e6dddf;" styleClass="button3" stylesheets="css/!--HTML!--.css" text="All Places">
                      <graphic>
                         <ImageView fitHeight="19.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                            <image>
