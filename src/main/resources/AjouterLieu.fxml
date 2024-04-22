@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="752.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AjouterCategoryL">
+<AnchorPane prefHeight="752.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AjouterLieu">
    <children>
       <BorderPane prefHeight="439.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
@@ -24,8 +24,9 @@
                <children>
                   <ImageView fitHeight="115.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Downloads/Monogram__Elegant_initial_E_botanical_logo__3_-removebg-preview%20(1).png" />
+                        <Image url="@icons/Monogram__preview.png" />
                      </image>
+                     
                      <VBox.margin>
                         <Insets left="15.0" top="25.0" />
                      </VBox.margin>
@@ -81,7 +82,7 @@
                               <Font size="10.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="cName" prefHeight="25.0" prefWidth="521.0" promptText="Nom " style="-fx-background-color: #FFFFFF;" styleClass="button4" stylesheets="css/!--HTML!--.css">
+                        <TextField fx:id="LName" prefHeight="25.0" prefWidth="521.0" promptText="Nom " style="-fx-background-color: #FFFFFF;" styleClass="button4" stylesheets="css/!--HTML!--.css">
                            <VBox.margin>
                               <Insets bottom="15.0" right="20.0" />
                            </VBox.margin>
@@ -96,7 +97,7 @@
                                     <Insets top="5.5" />
                                  </HBox.margin>
                               </Text>
-                              <TextField fx:id="cName1" prefHeight="25.0" prefWidth="216.0" promptText="Price" style="-fx-background-color: #FFFFFF;" styleClass="button4" stylesheets="css/!--HTML!--.css">
+                              <TextField fx:id="lPrix" prefHeight="25.0" prefWidth="216.0" promptText="Price" style="-fx-background-color: #FFFFFF;" styleClass="button4" stylesheets="css/!--HTML!--.css">
                                  <HBox.margin>
                                     <Insets right="20.0" />
                                  </HBox.margin>
@@ -109,7 +110,7 @@
                                     <Insets left="15.0" top="5.5" />
                                  </HBox.margin>
                               </Text>
-                              <TextField fx:id="cName32" prefHeight="25.0" prefWidth="232.0" promptText="Capacity" style="-fx-background-color: #FFFFFF;" styleClass="button4" stylesheets="css/!--HTML!--.css">
+                              <TextField fx:id="lCapacity" prefHeight="25.0" prefWidth="232.0" promptText="Capacity" style="-fx-background-color: #FFFFFF;" styleClass="button4" stylesheets="css/!--HTML!--.css">
                                  <HBox.margin>
                                     <Insets left="20.0" right="20.0" />
                                  </HBox.margin>
@@ -121,7 +122,7 @@
                               <Font size="10.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="cName33" prefHeight="25.0" prefWidth="167.0" promptText="Start Date" style="-fx-background-color: #FFFFFF;" styleClass="button4" stylesheets="css/!--HTML!--.css" text="Region">
+                        <TextField fx:id="lRegion" prefHeight="25.0" prefWidth="167.0" promptText="Region" style="-fx-background-color: #FFFFFF;" styleClass="button4" stylesheets="css/!--HTML!--.css">
                            <VBox.margin>
                               <Insets right="20.0" />
                            </VBox.margin>
@@ -131,31 +132,26 @@
                               <Font size="10.0" />
                            </font>
                         </Text>
-                        <Button mnemonicParsing="false" text="Upload Button" />
+                        <AnchorPane prefHeight="152.0" prefWidth="456.0">
+                           <children>
+                              <Button fx:id="btnImage" layoutX="29.0" layoutY="119.0" mnemonicParsing="false" onAction="#addImage" prefHeight="25.0" prefWidth="101.0" text="Upload Image" />
+                              <ImageView fx:id="imagL" fitHeight="127.0" fitWidth="101.0" layoutX="32.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
                            <font>
                               <Font size="10.0" />
                            </font>
                         </Text>
-                        <DatePicker promptText="Start Date" />
-                        <DatePicker promptText="End Date" />
+                        <DatePicker fx:id="dateD" promptText="Start Date" />
+                        <DatePicker fx:id="dateF" promptText="End Date" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
                            <font>
                               <Font size="10.0" />
                            </font>
                         </Text>
-                        <ChoiceBox prefWidth="150.0" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                        </Text>
-                        <TextField fx:id="cName34" prefHeight="25.0" prefWidth="167.0" promptText="Start Date" style="-fx-background-color: #FFFFFF;" styleClass="button4" stylesheets="css/!--HTML!--.css">
-                           <VBox.margin>
-                              <Insets right="20.0" />
-                           </VBox.margin>
-                        </TextField>
-                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#createCategory" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #e6dddf;" styleClass="button4" stylesheets="css/!--HTML!--.css" text="Save">
+                        <ChoiceBox fx:id="lCategory" prefWidth="150.0" />
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#addLieu" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #e6dddf;" styleClass="button4" stylesheets="css/!--HTML!--.css" text="Save">
                            <VBox.margin>
                               <Insets left="25.0" top="20.0" />
                            </VBox.margin>
@@ -169,6 +165,6 @@
             </Pane>
          </center>
       </BorderPane>
-      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <HBox layoutX="4.0" layoutY="28.0" prefHeight="97.0" prefWidth="196.0" />
    </children>
 </AnchorPane>

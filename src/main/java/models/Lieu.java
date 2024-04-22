@@ -44,6 +44,9 @@ public class Lieu {
         this.longitude = longitude;
     }
 
+    public Lieu(int lieubId) {
+    }
+
     public int getId() {
         return id;
     }

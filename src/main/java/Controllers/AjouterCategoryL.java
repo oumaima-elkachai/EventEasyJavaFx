@@ -182,6 +182,8 @@ public class AjouterCategoryL {
                 filteredCategories.add(category);
             }
         }
-    }
+
+
+}
 
 

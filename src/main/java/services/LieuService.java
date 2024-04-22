@@ -154,4 +154,9 @@ public class LieuService implements ILieuService<Lieu> {
         }
         return category;
     }
+    public static List<Category_l> getAllCategories() {
+        CategoryService categoryService = new CategoryService(); // Créez une instance de CategoryService
+        return categoryService.afficher(); // Utilisez la méthode afficher() pour récupérer les catégories
+    }
+
 }

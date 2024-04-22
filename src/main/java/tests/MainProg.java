@@ -1,16 +1,19 @@
 package tests;
 
+import models.Booking_l;
 import models.Category_l;
 import models.Lieu;
+import services.BookingService;
 import services.CategoryService;
 import services.LieuService;
 
+import java.util.Date;
 import java.util.List;
 
 public class MainProg {
     public static void main(String[] args) {
 
-
+/*
         CategoryService ps2 = new CategoryService();
         System.out.println(ps2.afficher());
         ps2.ajouter(new Category_l("Hotel"));
@@ -66,10 +69,9 @@ public class MainProg {
         }
 
 
+    }*/
 
 
 
 
-
-    }
-}
+    }}

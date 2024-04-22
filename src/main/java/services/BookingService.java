@@ -75,27 +75,19 @@ public class BookingService implements IBooking<Booking_l>{
                 int id = rs.getInt("id");
                 int lieub_id = rs.getInt("lieub_id");
                 float prix = rs.getFloat("Prix");
-
                 Date date_d = rs.getDate("date_d");
                 Date date_f = rs.getDate("date_f");
-
-
-                // Create a Service object
-                BookingService reservationService = new BookingService(date_d, date_f, prix, lieub_id);
-                // Add the Service object to the list
-                reservationServices.add(reservationService);
+                // Create a Booking_l object
+                Booking_l booking = new Booking_l(id, date_d, date_f, prix, new Lieu(lieub_id)); // Assuming you have a constructor in Lieu class that accepts an id
+                // Add the Booking_l object to the list
+                reservationServices.add(booking);
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
 
         return reservationServices;
-
     }
-
-
-
-
 
 
 }
